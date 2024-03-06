@@ -30,7 +30,7 @@ function BoardBar() {
         justifyContent: 'space-between',
         gap: 2,
         overflowX: 'auto',
-        bgcolor: theme => (theme.palette.mode === 'dark' ? '#212121' : '#1976d2')
+        bgcolor: theme => theme.palette.bgr_board
       }}
     >
       <Box

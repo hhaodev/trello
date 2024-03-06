@@ -16,10 +16,24 @@ const theme = extendTheme({
   },
   colorSchemes: {
     light: {
-      palette: {}
+      palette: {
+        app_bar: '#171717',
+        bgr_board: '#8395a7',
+        bgr_column: '#ebecf0',
+        bgr_card: '#ffffff',
+        bgr_scroll_card: '#bdc3c7',
+        border_card: '#34495e'
+      }
     },
     dark: {
-      palette: {}
+      palette: {
+        app_bar: '#171717',
+        bgr_board: '#212121',
+        bgr_column: '#3d3d3d',
+        bgr_card: '#000000b9',
+        bgr_scroll_card: '#b2bec3',
+        border_card: '#3498db'
+      }
     }
   },
   components: {

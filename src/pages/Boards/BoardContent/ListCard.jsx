@@ -2,6 +2,55 @@ import { Box } from '@mui/material'
 import Card from '../components/Card'
 
 function ListCard() {
+  const cards = [
+    {
+      name: 'card 1',
+      id: 1,
+      noneMedia: false
+    },
+
+    {
+      name: 'card 2',
+      id: 2,
+      noneMedia: false
+    },
+
+    {
+      name: 'card 3',
+      id: 3,
+      noneMedia: true
+    },
+
+    {
+      name: 'card 4',
+      id: 4,
+      noneMedia: true
+    },
+
+    {
+      name: 'card 5',
+      id: 5,
+      noneMedia: true
+    },
+
+    {
+      name: 'card 6',
+      id: 6,
+      noneMedia: true
+    },
+
+    {
+      name: 'card 7',
+      id: 7,
+      noneMedia: true
+    },
+
+    {
+      name: 'card 8',
+      id: 8,
+      noneMedia: false
+    }
+  ]
   return (
     <Box
       sx={{
@@ -19,24 +68,16 @@ function ListCard() {
         ${theme.trello.columnFooterHeight}
         )`,
         '&::-webkit-scrollbar-thumb': {
-          backgroundColor: '#a4b0be'
+          backgroundColor: theme => theme.palette.bgr_scroll_card
         },
-
         '&::-webkit-scrollbar-thumb:hover': {
-          backgroundColor: '#7f8fa6'
+          backgroundColor: theme => theme.palette.bgr_scroll_card
         }
       }}
     >
-      <Card />
-      <Card />
-      <Card noneMedia/>
-      <Card noneMedia/>
-      <Card noneMedia/>
-      <Card noneMedia/>
-      <Card noneMedia/>
-      <Card noneMedia/>
-      <Card noneMedia/>
-      <Card noneMedia/>
+      {cards.map(item => (
+        <Card key={item.id} data={item} />
+      ))}
     </Box>
   )
 }

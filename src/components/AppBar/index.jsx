@@ -28,7 +28,7 @@ function AppBar() {
         justifyContent: 'space-between',
         gap: 2,
         overflowX: 'auto',
-        bgcolor: theme => (theme.palette.mode === 'dark' ? '#171717' : '#1565c0')
+        bgcolor: theme => theme.palette.app_bar
       }}
     >
       <Box
@@ -85,7 +85,7 @@ function AppBar() {
           size="small"
           sx={{
             minWidth: 120,
-            maxWidth: 170,
+            maxWidth: 250,
             '& label': { color: 'white' },
             '& input': { color: 'white' },
             '& label.Mui-focused': { color: 'white' },
@@ -104,15 +104,15 @@ function AppBar() {
           value={searchVal}
           onChange={e => setSearchVal(e.target.value)}
           InputProps={{
-            startAdornment: (
-              <InputAdornment position="start">
-                <SearchIcon
-                  sx={{
-                    color: 'white'
-                  }}
-                />
-              </InputAdornment>
-            ),
+            // startAdornment: (
+            //   <InputAdornment position="start">
+            //     <SearchIcon
+            //       sx={{
+            //         color: 'white'
+            //       }}
+            //     />
+            //   </InputAdornment>
+            // ),
             endAdornment: (
               <CloseIcon
                 onClick={() => setSearchVal('')}

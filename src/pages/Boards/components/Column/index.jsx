@@ -14,6 +14,7 @@ import {
   ListItemText,
   Menu,
   MenuItem,
+  TextField,
   Tooltip,
   Typography
 } from '@mui/material'
@@ -29,12 +30,14 @@ function Column() {
   const handleClose = () => {
     setAnchorEl(null)
   }
+
+  const [isE, setIsE] = useState(false)
   return (
     <Box
       sx={{
         maxWidth: 300,
         minWidth: 300,
-        bgcolor: theme => (theme.palette.mode === 'dark' ? '#2c3e50' : '#ebecf0'),
+        bgcolor: theme => theme.palette.bgr_column,
         borderRadius: '6px',
         height: 'fit-content',
         maxHeight: theme => `calc(${theme.trello.boardContentHeight} - ${theme.spacing(5)})`
@@ -44,22 +47,27 @@ function Column() {
       <Box
         sx={{
           height: theme => theme.trello.columnHeaderHeight,
-          p: 2,
+          p: 1,
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between'
         }}
       >
-        <Typography
-          variant="h6"
-          sx={{
-            fontSize: '1rem',
-            fontWeight: 'bold',
-            cursor: 'pointer'
-          }}
-        >
-          Column Title
-        </Typography>
+        {!isE && (
+          <Typography
+            variant="h6"
+            sx={{
+              fontSize: '1rem',
+              fontWeight: 'bold',
+              cursor: 'pointer',
+              pl: 1
+            }}
+            onClick={() => setIsE(true)}
+          >
+            Column Title
+          </Typography>
+        )}
+        {isE && <TextField autoFocus onBlur={() => setIsE(false)} id="outlined-search" type="text" size="small" />}
         <Box>
           <Tooltip title="More option">
             <IconButton
@@ -133,15 +141,19 @@ function Column() {
       <Box
         sx={{
           height: theme => theme.trello.columnFooterHeight,
-          p: 2,
+          p: 1,
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between'
         }}
       >
-        <Button startIcon={<AddCardIcon />}>Add new card</Button>
+        <Button sx={{ p: '8px 16px' }} startIcon={<AddCardIcon />}>
+          Add new card
+        </Button>
         <Tooltip title="Drag to move">
-          <DragHandleIcon sx={{ cursor: 'pointer' }} />
+          <IconButton>
+            <DragHandleIcon sx={{ cursor: 'pointer' }} />
+          </IconButton>
         </Tooltip>
       </Box>
     </Box>

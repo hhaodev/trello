@@ -1,6 +1,6 @@
+import NoteAddIcon from '@mui/icons-material/NoteAdd'
 import { Box, Button } from '@mui/material'
 import Column from '../components/Column'
-import NoteAddIcon from '@mui/icons-material/NoteAdd'
 
 function ListColumn() {
   return (
@@ -13,24 +13,18 @@ function ListColumn() {
         overflowY: 'hidden',
         overflowX: 'auto',
         gap: 2,
-        '&::-webkit-scrollbar': { width: '6px', height: '7px' },
+        '&::-webkit-scrollbar': { width: '6px', height: '8px' },
         '&::-webkit-scrollbar-thumb': {
           visibility: 'visible'
-        }
+        },
+        borderRadius: '4px'
       }}
     >
-      <Column />
-      <Column />
-      <Column />
-      <Column />
-      <Column />
-      <Column />
-      <Column />
       <Column />
 
       <Box
         sx={{
-          minWidth: 200,
+          minWidth: 230,
           maxWidth: 250,
           borderRadius: '6px',
           height: 'fit-content',
