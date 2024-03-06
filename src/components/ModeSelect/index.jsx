@@ -18,9 +18,9 @@ function ModeSelect() {
     <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
       <InputLabel
         sx={{
-          color: 'white',
+          color: theme => theme.palette.text_navbar,
           '&.Mui-focused': {
-            color: 'white'
+            color: theme => theme.palette.text_navbar
           }
         }}
         id="label-select-dark-light-mode"
@@ -34,18 +34,18 @@ function ModeSelect() {
         label="Mode"
         onChange={handleChange}
         sx={{
-          color: 'white',
+          color: theme => theme.palette.text_navbar,
           '.MuiOutlinedInput-notchedOutline': {
-            borderColor: 'white'
+            borderColor: theme => theme.palette.text_navbar
           },
           '&:hover .MuiOutlinedInput-notchedOutline': {
-            borderColor: 'white'
+            borderColor: theme => theme.palette.text_navbar
           },
           '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-            borderColor: 'white'
+            borderColor: theme => theme.palette.text_navbar
           },
           '.MuiSvgIcon-root': {
-            color: 'white'
+            color: theme => theme.palette.text_navbar
           }
         }}
       >

@@ -5,13 +5,13 @@ import AddToDriveIcon from '@mui/icons-material/AddToDrive'
 import FilterListIcon from '@mui/icons-material/FilterList'
 import PersonAddIcon from '@mui/icons-material/PersonAdd'
 const MENU_STYLES = {
-  color: 'white',
+  color: theme => theme.palette.text_color,
   bgcolor: 'transparent',
   border: 'none',
   paddingX: '5px',
   borderRadius: '4px',
   '.MuiSvgIcon-root': {
-    color: 'white'
+    color: theme => theme.palette.text_color
   },
   '&:hover': {
     bgcolor: '#ffffff3d'
@@ -53,7 +53,11 @@ function BoardBar() {
         }}
       >
         <Button
-          sx={{ color: 'white', borderColor: 'white', '&:hover': { borderColor: 'white' } }}
+          sx={{
+            color: theme => theme.palette.text_color,
+            borderColor: theme => theme.palette.text_color,
+            '&:hover': { borderColor: theme => theme.palette.text_color }
+          }}
           startIcon={<PersonAddIcon />}
           variant="outlined"
         >
@@ -66,8 +70,8 @@ function BoardBar() {
               width: '34px',
               height: '34px',
               fontSize: '16px',
-              color: 'white',
-              borer: '1px solid #a4b0be',
+              color: theme => theme.palette.text_color,
+              borer: theme => `1px solid ${theme.palette.text_color}`,
               borderWidth: '1px !important',
               cursor: 'pointer',
               '&:first-of-type': {

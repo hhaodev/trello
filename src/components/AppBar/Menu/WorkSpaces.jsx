@@ -20,7 +20,7 @@ export default function WorkSpaces() {
   return (
     <Box>
       <Button
-        sx={{ color: 'white' }}
+        sx={{ color: theme => theme.palette.text_navbar }}
         id="basic-button-workspaces"
         aria-controls={open ? 'basic-menu-workspaces' : undefined}
         aria-haspopup="true"

@@ -54,11 +54,11 @@ function ListCard() {
   return (
     <Box
       sx={{
-        p: '0 6px',
+        p: '2px 6px',
         m: '0 4px',
         display: 'flex',
         flexDirection: 'column',
-        gap: 1,
+        gap: 1.25,
         overflowX: 'hidden',
         overflowY: 'auto',
         maxHeight: theme => `calc(

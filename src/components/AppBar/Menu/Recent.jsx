@@ -20,7 +20,7 @@ export default function Recent() {
   return (
     <Box>
       <Button
-        sx={{ color: 'white' }}
+        sx={{ color: theme => theme.palette.text_navbar }}
         id="basic-button-recent"
         aria-controls={open ? 'basic-menu-recent' : undefined}
         aria-haspopup="true"

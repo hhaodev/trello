@@ -17,8 +17,10 @@ const theme = extendTheme({
   colorSchemes: {
     light: {
       palette: {
+        text_navbar: '#ffffff',
+        text_color: '#000000',
         app_bar: '#171717',
-        bgr_board: '#8395a7',
+        bgr_board: '#d1d8e0',
         bgr_column: '#ebecf0',
         bgr_card: '#ffffff',
         bgr_scroll_card: '#bdc3c7',
@@ -27,6 +29,8 @@ const theme = extendTheme({
     },
     dark: {
       palette: {
+        text_navbar: '#ffffff',
+        text_color: '#ffffff',
         app_bar: '#171717',
         bgr_board: '#212121',
         bgr_column: '#3d3d3d',

@@ -28,16 +28,19 @@ function ListColumn() {
           maxWidth: 250,
           borderRadius: '6px',
           height: 'fit-content',
-          bgcolor: '#ffffff3d'
+          bgcolor: theme => theme.palette.bgr_column
         }}
       >
         <Button
           sx={{
-            color: 'white',
+            color: theme => theme.palette.text_color,
             width: '100%',
             justifyContent: 'flex-start',
             pl: 2.5,
-            py: 1
+            py: 1,
+            '&:hover': {
+              bgcolor: theme => theme.palette.bgr_column
+            }
           }}
           startIcon={<NoteAddIcon />}
         >

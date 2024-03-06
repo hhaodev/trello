@@ -20,7 +20,7 @@ export default function Starred() {
   return (
     <Box>
       <Button
-        sx={{ color: 'white' }}
+        sx={{ color: theme => theme.palette.text_navbar }}
         id="basic-button-starred"
         aria-controls={open ? 'basic-menu-starred' : undefined}
         aria-haspopup="true"
